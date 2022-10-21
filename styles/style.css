@@ -1,0 +1,76 @@
+*,
+*::after,
+*::before{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+
+	
+}
+.container{
+	text-align: center;
+	width: 0vw;
+	height: 0vw;
+	margin: 5vw;
+	left: 400px;
+	position: absolute;
+	/*perspective: 100px;*/
+	background-color: darkcyan;
+	flex-wrap: wrap;
+	align-content: center;
+	border-radius: 1em;
+	
+	
+	
+	
+	
+}
+.front, .back{
+	text-align: center;
+	position: relative;
+	/*height: 500px;*/
+	/*right: 500px;*/
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	
+}
+.front{
+	z-index: 20;
+}
+.profile{
+	width: 500px;
+	height: 500px;
+	border-radius: 2em;
+	object-fit: cover;
+}
+.front{
+	position: absolute;
+
+}
+.back{
+background-image: url(https://i.postimg.cc/Twq72hmb/390287641b04f1ab6eaf205c84e5dc2b.gif);
+background-repeat: no-repeat;
+background-size: cover;
+display: flex;
+flex-flow:wrap;
+align-items: center;
+text-align:center ;
+width: 500px;
+height: 500px;
+border-radius: 5em;
+}
+.back h2{
+	font-size:3em ;
+	text-shadow: .2vw .2vw .3vw blue;
+	color: floralwhite;
+	font-style: italic;
+}
+.back p{
+	margin: 2em 0;
+	font-size: 3em;
+	text-shadow: .2vw .2vw .3vw white;
+	color: floralwhite;
+}
+.container:hover .front{
+	transform: rotateY(100deg);
+}
